@@ -8,7 +8,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 export class HomePage implements OnInit {
   cameraForm: FormGroup;
-  focalLength = 0;
+  focalLength: number;
   cropFactor = 1;
   expTime600 = 0;
   expTime500 = 0;
@@ -34,7 +34,7 @@ export class HomePage implements OnInit {
   ngOnInit() {
 
     this.cameraForm = new FormGroup({
-      'focalLength': new FormControl(this.focalLength, Validators.required),
+      'focalLength': new FormControl(null, Validators.required),
       'cropFactor': new FormControl(this.cropFactor, Validators.required)
     });
   }
