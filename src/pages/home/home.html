@@ -1,15 +1,21 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>
+      Calculate
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-row text-center>
     <ion-col>
-      <h2>Static Star Field</h2>
+      <h2>Static Starfield</h2>
+      <hr>
       <p>
-        Bitte gib ein die Brennweite deiner Linse und den Brennfaktor deines Objektivs um die Belichtungszeit zu berechnen
+        Bitte gib die Brennweite deiner Linse und den Brennfaktor deines Objektivs ein, um die Belichtungszeit zu berechnen.
+        <br>
+        <br> Please insert the Focal Length of your lens and the Cropfactor of your camera in order to calculate the Exposure
+        Time.
       </p>
 
     </ion-col>
@@ -26,9 +32,9 @@
         <ion-input type="number" placeholder="1.6" formControlName="cropFactor" required></ion-input>
       </ion-item>
       <ion-item>
-        <button ion-button type="submit" block large icon-start [disabled]="!cameraForm.valid">
+        <button ion-button type="submit" block icon-start [disabled]="!cameraForm.valid">
           <ion-icon name="calculator"></ion-icon>
-          Belichtungszeit berechnen
+          Berechnen / Calculate
         </button>
       </ion-item>
     </ion-list>
@@ -36,10 +42,11 @@
 
   <ion-row text-center *ngIf="berechnet">
     <ion-col>
-      <h4>Empfohlene max. Belichtungszeit</h4>
+      <h4>Empfohlene max. Belichtungszeit
+        <br> Suggested max. exposure time</h4>
       <ion-card>
         <ion-card-header class="results">
-          600er Regel
+          600er Regel/Rule
         </ion-card-header>
         <ion-card-content class="results">
           {{ expTime600 | number: '2.0-2'}} sec
@@ -47,7 +54,7 @@
       </ion-card>
       <ion-card>
         <ion-card-header class="results">
-          500er Regel
+          500er Regel/Rule
         </ion-card-header>
         <ion-card-content class="results">
           {{ expTime500 | number: '2.0-2'}} sec
