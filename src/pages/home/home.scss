@@ -1,3 +1,19 @@
 page-home {
+    p.results{
+        font-size: 20px;
+    }
 
+    ion-card-header.results {
+        font-size: 2.0em;
+        width: 100%;
+        color: #00f;
+      }
+    
+      ion-card-content.results {
+        font-size: 3.0em;
+        width: 100%;
+        font-weight: bold;
+        color: #00f;
+      }
+    
 }

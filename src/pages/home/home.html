@@ -15,28 +15,45 @@
     </ion-col>
   </ion-row>
 
-  <form>
-    <ion-row>
-      <ion-col>
-        <ion-list>
-
-          <ion-item>
-            <ion-label>Brennweite</ion-label>
-            <ion-input type="number" placeholder="3.4"></ion-input>
-          </ion-item>
-
-          <ion-item>
-            <ion-label>Brennfaktor</ion-label>
-            <ion-input type="number" placeholder="1.6"></ion-input>
-          </ion-item>
-          <ion-item>
-            <button ion-button type="submit" block large icon-start>
-              <ion-icon name="calculator"></ion-icon>
-              Belichtungszeit berechnen
-            </button>
-          </ion-item>
-        </ion-list>
-      </ion-col>
-    </ion-row>
+  <form [formGroup]="cameraForm" (ngSubmit)="onSubmit()">
+    <ion-list>
+      <ion-item>
+        <ion-label>Brennweite / Focal Length</ion-label>
+        <ion-input type="number" placeholder="11" formControlName="focalLength" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cropfaktor / cropfactor</ion-label>
+        <ion-input type="number" placeholder="1.6" formControlName="cropFactor" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <button ion-button type="submit" block large icon-start [disabled]="!cameraForm.valid">
+          <ion-icon name="calculator"></ion-icon>
+          Belichtungszeit berechnen
+        </button>
+      </ion-item>
+    </ion-list>
   </form>
+
+  <ion-row text-center *ngIf="berechnet">
+    <ion-col>
+      <h4>Empfohlene Belichtungszeit</h4>
+      <ion-card>
+        <ion-card-header class="results">
+          600er Regel
+        </ion-card-header>
+        <ion-card-content class="results">
+          {{ expTime600 | number: '2.0-2'}} sec
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header class="results">
+          500er Regel
+        </ion-card-header>
+        <ion-card-content class="results">
+          {{ expTime500 | number: '2.0-2'}} sec
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
 </ion-content>
