@@ -5,13 +5,38 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <ion-row text-center>
+    <ion-col>
+      <h2>Static Star Field</h2>
+      <p>
+        Bitte gib ein die Brennweite deiner Linse und den Brennfaktor deines Objektivs um die Belichtungszeit zu berechnen
+      </p>
+
+    </ion-col>
+  </ion-row>
+
+  <form>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+
+          <ion-item>
+            <ion-label>Brennweite</ion-label>
+            <ion-input type="number" placeholder="3.4"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Brennfaktor</ion-label>
+            <ion-input type="number" placeholder="1.6"></ion-input>
+          </ion-item>
+          <ion-item>
+            <button ion-button type="submit" block large icon-start>
+              <ion-icon name="calculator"></ion-icon>
+              Belichtungszeit berechnen
+            </button>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </form>
 </ion-content>
