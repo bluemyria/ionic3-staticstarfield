@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'page-home',
@@ -13,6 +14,20 @@ export class HomePage implements OnInit {
   expTime600 = 0;
   expTime500 = 0;
   berechnet = false;
+  txtFocalLength = "";
+
+
+  constructor(private translate: TranslateService) {
+    // this language will be used as a fallback when a translation isn't found in the current language
+    translate.setDefaultLang('en');
+
+    // the lang to use, if the lang isn't available, it will use the current loader to get them
+    translate.use('en');
+  }
+
+  public changeLanguage(language) {
+    this.translate.use(language);
+  }
 
   onSubmit() {
     const value = this.cameraForm.value;

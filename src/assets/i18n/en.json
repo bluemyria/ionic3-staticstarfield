@@ -1,0 +1,14 @@
+{
+    "home": "Home",
+    "settings": "Settings",
+    "txtFocalLength": "Please insert the Focal Length of your lens and the Cropfactor of your camera in order to calculate the Exposure Time",
+    "MENU": {
+        "ENGLISH": "in English",
+        "GERMAN": "in German"
+    },
+    "demo": {
+        "title": "Translation Demo",
+        "german": "German",
+        "english": "English"
+    }
+}

@@ -12,12 +12,13 @@
       <h2>Static Starfield</h2>
       <hr>
       <p>
-        Bitte gib die Brennweite deiner Linse und den Brennfaktor deines Objektivs ein, um die Belichtungszeit zu berechnen.
-        <br>
-        <br> Please insert the Focal Length of your lens and the Cropfactor of your camera in order to calculate the Exposure
-        Time.
+        ok {{ 'txtFocalLength' | translate}}
       </p>
-
+      <h2 translate>demo.title</h2>
+      <p>
+        <button ion-button (click)="changeLanguage('de')">{{ 'demo.german' | translate }}</button>
+      </p>
+      <button ion-button (click)="changeLanguage('en')">{{ 'demo.english' | translate }}</button>
     </ion-col>
   </ion-row>
 

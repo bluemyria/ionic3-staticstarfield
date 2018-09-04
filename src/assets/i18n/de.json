@@ -1,0 +1,14 @@
+{
+    "home": "Home",
+    "settings": "Einstellungen",
+    "txtFocalLength": "Bitte gib die Brennweite deiner Linse und den Brennfaktor deines Objektivs ein, um die Belichtungszeit zu berechnen",
+    "MENU": {
+        "ENGLISH": "auf Englisch",
+        "GERMAN": "auf Deutsch"
+    },
+    "demo": {
+        "title": "Übersetzungs-Demo",
+        "german": "Deutsch",
+        "english": "Englisch"
+    }
+}
