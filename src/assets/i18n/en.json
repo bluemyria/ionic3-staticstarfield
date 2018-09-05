@@ -2,6 +2,12 @@
     "home": "Home",
     "settings": "Settings",
     "txtFocalLength": "Please insert the Focal Length of your lens and the Cropfactor of your camera in order to calculate the Exposure Time",
+    "FocalLength": "Focal Length",
+    "Cropfactor": "Cropfactor",
+    "Calculate": "Calculate",
+    "maxExposureTime": "Suggested max. exposure time",
+    "600Rule": "600-Rule",
+    "500Rule": "500-Rule",
     "MENU": {
         "ENGLISH": "in English",
         "GERMAN": "in German"

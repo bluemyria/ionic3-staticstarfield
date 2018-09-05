@@ -2,6 +2,12 @@
     "home": "Home",
     "settings": "Einstellungen",
     "txtFocalLength": "Bitte gib die Brennweite deiner Linse und den Brennfaktor deines Objektivs ein, um die Belichtungszeit zu berechnen",
+    "FocalLength": "Brennweite",
+    "Cropfactor": "Cropfaktor",
+    "Calculate": "Berechnen",
+    "maxExposureTime": "Empfohlene max. Belichtungszeit",
+    "600Rule": "600er Regel",
+    "500Rule": "500er Regel",
     "MENU": {
         "ENGLISH": "auf Englisch",
         "GERMAN": "auf Deutsch"
